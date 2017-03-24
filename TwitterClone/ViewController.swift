@@ -15,11 +15,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let tweetCellNib = UINib(nibName: "TweetTableViewCell", bundle: Bundle.main)
-//        tableView.register(tweetCellNib, forCellReuseIdentifier: "TweetCell")
+        let tweetCellNib = UINib(nibName: "TweetTableViewCell", bundle: Bundle.main)
+        tableView.register(tweetCellNib, forCellReuseIdentifier: TweetTableViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.estimatedRowHeight = 80
+        tableView.estimatedRowHeight = 100
         self.tableView.rowHeight = UITableViewAutomaticDimension
 
         refreshFeed()
@@ -28,7 +28,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         switch segue.identifier! {
-        case "ShowDetailSegue":
+        case DetailViewController.identifier:
             if let selectedIndex = self.tableView.indexPathForSelectedRow?.row {
                 let selectedTweet = self.allTweets[selectedIndex]
                 
@@ -38,7 +38,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 destinationController.tweet = selectedTweet
             }
             break
-        case "ShowProfileSegue":
+        case ProfileViewController.identifier:
             guard let destinationController = segue.destination as? ProfileViewController else {
                 return
             }
@@ -69,13 +69,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TweetCell", for: indexPath) as! TweetTableViewCell
-        cell.tweetLabel.text = self.allTweets[indexPath.row].text
-        cell.tweetSubtitleLabel.text = self.allTweets[indexPath.row].user?.name
+        let cell = tableView.dequeueReusableCell(withIdentifier: TweetTableViewCell.identifier, for: indexPath) as! TweetTableViewCell
+        cell.tweet = self.allTweets[indexPath.row]
+
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        //self.allTweets[indexPath.row]
+        self.performSegue(withIdentifier: DetailViewController.identifier, sender: nil)
     }
 }

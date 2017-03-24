@@ -10,11 +10,13 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    var tweet: Tweet!
-    
+
     @IBOutlet weak var retweetedLabel: UILabel!
     @IBOutlet weak var tweetLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
+    
+    var tweet: Tweet!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         retweetedLabel.text = tweet.isRetweeted ? "Retweeted" : "Non-retweeted"

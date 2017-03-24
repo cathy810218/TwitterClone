@@ -20,10 +20,12 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        usernameLabel.text = user?.name
-        locationLabel.text = user?.location ?? "Unknown"
-        followerLabel.text = user?.followerCount
-        followingLabel.text = user?.followingCount
+        if let user = user {
+            usernameLabel.text = user.name
+            locationLabel.text = user.location == "" ? "Unknown" : user.location
+            followerLabel.text = user.followerCount
+            followingLabel.text = user.followingCount
+        }
         displayUserImage()
     }
     

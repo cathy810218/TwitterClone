@@ -75,9 +75,8 @@ class TwitterService: NSObject {
     }
     
     
-    func updateTimeline(callback: @escaping (String?, [Tweet]?) -> (Void)) {
-        let homeTimelneURL = URL(string: "https://api.twitter.com/1.1/statuses/home_timeline.json")
-        let request = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: .GET, url: homeTimelneURL, parameters: nil)
+    func updateTimeline(url: URL, callback: @escaping (String?, [Tweet]?) -> (Void)) {
+        let request = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: .GET, url: url, parameters: nil)
         request?.account = self.account
         
         request?.perform(handler: { (data, response, error) in
@@ -117,11 +116,16 @@ class TwitterService: NSObject {
             login(completionHandler: { (errorMessage, account) in
                 if let account = account {
                     self.account = account
-                    self.updateTimeline(callback: callback)
+                    self.updateTimeline(url: URL(string:"https://api.twitter.com/1.1/statuses/home_timeline.json")!, callback: callback)
                 }
             })
         } else {
-            self.updateTimeline(callback: callback)
+            self.updateTimeline(url: URL(string:"https://api.twitter.com/1.1/statuses/home_timeline.json")!,callback: callback)
         }
+    }
+    
+    func getTweetsForUserWith(_ screenName: String, callback: @escaping (String?, [Tweet]?) -> Void) {
+        let url = URL(string : "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=\(screenName)")
+        self.updateTimeline(url: url!, callback: callback)
     }
 }

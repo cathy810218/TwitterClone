@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B47467A1E84C6B4004BE17F /* UIImage+Resized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4746791E84C6B4004BE17F /* UIImage+Resized.swift */; };
+		6B47467D1E84DD76004BE17F /* UIImage+FetchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B47467C1E84DD76004BE17F /* UIImage+FetchImage.swift */; };
+		6B47467F1E84E10A004BE17F /* UIResponder+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B47467E1E84E10A004BE17F /* UIResponder+Identifier.swift */; };
 		6BA1B1291E81C0AE00FC04C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA1B1281E81C0AE00FC04C0 /* AppDelegate.swift */; };
 		6BA1B12E1E81C0AE00FC04C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BA1B12C1E81C0AE00FC04C0 /* Main.storyboard */; };
 		6BA1B1301E81C0AE00FC04C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BA1B12F1E81C0AE00FC04C0 /* Assets.xcassets */; };
@@ -42,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B4746791E84C6B4004BE17F /* UIImage+Resized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Resized.swift"; sourceTree = "<group>"; };
+		6B47467C1E84DD76004BE17F /* UIImage+FetchImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+FetchImage.swift"; sourceTree = "<group>"; };
+		6B47467E1E84E10A004BE17F /* UIResponder+Identifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+Identifier.swift"; sourceTree = "<group>"; };
 		6BA1B1251E81C0AE00FC04C0 /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BA1B1281E81C0AE00FC04C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BA1B12D1E81C0AE00FC04C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,6 +96,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B47467B1E84C765004BE17F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6B4746791E84C6B4004BE17F /* UIImage+Resized.swift */,
+				6B47467C1E84DD76004BE17F /* UIImage+FetchImage.swift */,
+				6B47467E1E84E10A004BE17F /* UIResponder+Identifier.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		6BA1B11C1E81C0AE00FC04C0 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +129,7 @@
 		6BA1B1271E81C0AE00FC04C0 /* TwitterClone */ = {
 			isa = PBXGroup;
 			children = (
+				6B47467B1E84C765004BE17F /* Extension */,
 				6BA1B1581E81C0CC00FC04C0 /* Model */,
 				6BA1B1571E81C0C000FC04C0 /* View */,
 				6BA1B1561E81C0BA00FC04C0 /* Controller */,
@@ -315,6 +332,9 @@
 				6BA1B15E1E81D08200FC04C0 /* TweetJSONParser.swift in Sources */,
 				6BA1B1701E83B0D200FC04C0 /* ProfileViewController.swift in Sources */,
 				6BA1B15A1E81CFFB00FC04C0 /* Tweet.swift in Sources */,
+				6B47467D1E84DD76004BE17F /* UIImage+FetchImage.swift in Sources */,
+				6B47467F1E84E10A004BE17F /* UIResponder+Identifier.swift in Sources */,
+				6B47467A1E84C6B4004BE17F /* UIImage+Resized.swift in Sources */,
 				6BA1B1621E81EC9E00FC04C0 /* User.swift in Sources */,
 				6BA1B1601E81D0BB00FC04C0 /* TwitterService.swift in Sources */,
 				6BA1B1291E81C0AE00FC04C0 /* AppDelegate.swift in Sources */,
