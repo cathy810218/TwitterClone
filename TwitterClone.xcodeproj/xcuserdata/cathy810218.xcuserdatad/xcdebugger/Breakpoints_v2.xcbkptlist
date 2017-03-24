@@ -9,13 +9,221 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TwitterClone/ViewController.swift"
-            timestampString = "511980505.129106"
+            filePath = "TwitterClone/TweetJSONParser.swift"
+            timestampString = "511983578.583477"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "userFrom(data:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TwitterClone/ViewController.swift"
+            timestampString = "511996739.922584"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TwitterClone/TwitterService.swift"
+            timestampString = "511996513.681816"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "getOAuthUser(callback:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TwitterClone/User.swift"
+            timestampString = "511997267.926994"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "init(json:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TwitterClone.User.init (json : Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; Swift.Optional&lt;TwitterClone.User&gt;"
+                  moduleName = "TwitterClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cathy810218/Desktop/Cathy&apos;s%20Work/CodeFellows/TwitterClone/TwitterClone/User.swift"
+                  timestampString = "511998466.068768"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "1901">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TwitterClone.User.init (json : Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; Swift.Optional&lt;TwitterClone.User&gt;"
+                  moduleName = "TwitterClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cathy810218/Desktop/Cathy&apos;s%20Work/CodeFellows/TwitterClone/TwitterClone/User.swift"
+                  timestampString = "511998466.071165"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "2191">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TwitterClone/User.swift"
+            timestampString = "511997230.153326"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "init(json:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TwitterClone.User.init (json : Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; Swift.Optional&lt;TwitterClone.User&gt;"
+                  moduleName = "TwitterClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cathy810218/Desktop/Cathy&apos;s%20Work/CodeFellows/TwitterClone/TwitterClone/User.swift"
+                  timestampString = "511998466.075769"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "78">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TwitterClone.User.__allocating_init (json : Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; Swift.Optional&lt;TwitterClone.User&gt;"
+                  moduleName = "TwitterClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cathy810218/Desktop/Cathy&apos;s%20Work/CodeFellows/TwitterClone/TwitterClone/User.swift"
+                  timestampString = "511998466.07824"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TwitterClone/User.swift"
+            timestampString = "511997405.56354"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "init(json:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TwitterClone/ProfileViewController.swift"
+            timestampString = "511998465.93944"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "displayUserImage()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TwitterClone.ProfileViewController.(displayUserImage () -&gt; ()).(closure #1)"
+                  moduleName = "TwitterClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cathy810218/Desktop/Cathy&apos;s%20Work/CodeFellows/TwitterClone/TwitterClone/ProfileViewController.swift"
+                  timestampString = "511998069.544795"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "344">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TwitterClone.ProfileViewController.(displayUserImage () -&gt; ()).(closure #1)"
+                  moduleName = "TwitterClone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cathy810218/Desktop/Cathy&apos;s%20Work/CodeFellows/TwitterClone/TwitterClone/ProfileViewController.swift"
+                  timestampString = "511998069.546834"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "754">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TwitterClone/ProfileViewController.swift"
+            timestampString = "511998465.93944"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "displayUserImage()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

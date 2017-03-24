@@ -124,36 +124,4 @@ class TwitterService: NSObject {
             self.updateTimeline(callback: callback)
         }
     }
-//    class func tweetsFromUserTimeline(screenName: String, completionHandler: @escaping (String?, [Tweet]?) -> Void) {
-//        let userHomeTimelineURL = URL(string: "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=" + "\(screenName)")
-//        let request = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: .GET, url: userHomeTimelineURL, parameters: nil)
-//        request?.account = shared.account
-//        
-//        request?.perform(handler: { (data, response, error) in
-//            if let _ = error {
-//                completionHandler("Error: Check the Internet connection", nil)
-//                print("no internet")
-//            } else {
-//                switch response!.statusCode {
-//                case 200:
-//                    // succeed!
-//                    let tweets = TweetJSONParser.dataFromJSON(jsonData: data!)
-//                    completionHandler(nil, tweets)
-//                    break
-//                case 304:
-//                    completionHandler("No new data", nil)
-//                    break
-//                case 400...499:
-//                    completionHandler("Error: clients error", nil)
-//                    break
-//                case 500...599:
-//                    completionHandler("Error: server error", nil)
-//                    break
-//                default:
-//                    completionHandler("unknown error", nil)
-//                    break
-//                }
-//            }
-//        })
-//    }
 }

@@ -10,7 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var allTweets = [Tweet]()
-
+    var loggedInUser: User?
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +22,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.estimatedRowHeight = 80
         self.tableView.rowHeight = UITableViewAutomaticDimension
 
-       refreshFeed()
+        refreshFeed()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        if segue.identifier == "ShowDetailSegue" {
-            // send curret cell's username to the next viewcontroller
+        switch segue.identifier! {
+        case "ShowDetailSegue":
             if let selectedIndex = self.tableView.indexPathForSelectedRow?.row {
                 let selectedTweet = self.allTweets[selectedIndex]
                 
@@ -36,6 +37,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 }
                 destinationController.tweet = selectedTweet
             }
+            break
+        case "ShowProfileSegue":
+            guard let destinationController = segue.destination as? ProfileViewController else {
+                return
+            }
+            destinationController.user = loggedInUser
+            break
+        default:
+            break
         }
     }
     
@@ -46,6 +56,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     self.allTweets = tweets
                     self.tableView.reloadData()
                 }
+                
+                TwitterService.shared.getOAuthUser(callback: { (errorMsg, user) in
+                    self.loggedInUser = user
+                })
             }
         }
     }

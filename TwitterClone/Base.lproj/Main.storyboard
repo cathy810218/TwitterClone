@@ -6,13 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="vUr-qK-oTf">
             <objects>
-                <viewController id="34t-5P-7gi" customClass="ProfileViewController" customModule="TwitterClone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Profile" id="34t-5P-7gi" customClass="ProfileViewController" customModule="TwitterClone" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qZY-d2-GGI"/>
                         <viewControllerLayoutGuide type="bottom" id="Ja5-HE-mXV"/>
@@ -20,12 +21,80 @@
                     <view key="view" contentMode="scaleToFill" id="m9u-rz-qMh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jNU-kO-7eQ">
+                                <rect key="frame" x="112" y="132" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Mjz-lQ-xT7"/>
+                                    <constraint firstAttribute="width" constant="150" id="xnE-SY-hh4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4s-ks-Ts7">
+                                <rect key="frame" x="148" y="290" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hm-aI-7GB">
+                                <rect key="frame" x="46" y="323" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Followings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAf-dx-bAI">
+                                <rect key="frame" x="248" y="323" width="81" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QjJ-K3-Nx6">
+                                <rect key="frame" x="61" y="359" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ml-Ok-OAM">
+                                <rect key="frame" x="268" y="359" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdL-gv-e49">
+                                <rect key="frame" x="154" y="440" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k4s-ks-Ts7" firstAttribute="centerX" secondItem="m9u-rz-qMh" secondAttribute="centerX" id="0a5-4s-9Rg"/>
+                            <constraint firstItem="3ml-Ok-OAM" firstAttribute="top" secondItem="aAf-dx-bAI" secondAttribute="bottom" constant="15" id="9nr-Cm-BQJ"/>
+                            <constraint firstItem="jNU-kO-7eQ" firstAttribute="centerX" secondItem="m9u-rz-qMh" secondAttribute="centerX" id="B3f-jf-vQg"/>
+                            <constraint firstItem="8Hm-aI-7GB" firstAttribute="centerY" secondItem="m9u-rz-qMh" secondAttribute="centerY" id="PZu-ti-ZcD"/>
+                            <constraint firstItem="8Hm-aI-7GB" firstAttribute="leading" secondItem="m9u-rz-qMh" secondAttribute="leadingMargin" constant="30" id="Pu2-TL-JLx"/>
+                            <constraint firstItem="QjJ-K3-Nx6" firstAttribute="centerX" secondItem="8Hm-aI-7GB" secondAttribute="centerX" id="XbT-Ql-vhv"/>
+                            <constraint firstItem="k4s-ks-Ts7" firstAttribute="top" secondItem="jNU-kO-7eQ" secondAttribute="bottom" constant="8" id="ZzV-0T-tDg"/>
+                            <constraint firstItem="jNU-kO-7eQ" firstAttribute="top" secondItem="qZY-d2-GGI" secondAttribute="bottom" constant="68" id="bDU-MV-bTN"/>
+                            <constraint firstItem="QjJ-K3-Nx6" firstAttribute="top" secondItem="8Hm-aI-7GB" secondAttribute="bottom" constant="15" id="dc8-6b-dRl"/>
+                            <constraint firstItem="SdL-gv-e49" firstAttribute="centerX" secondItem="m9u-rz-qMh" secondAttribute="centerX" id="hcZ-XW-8cO"/>
+                            <constraint firstItem="SdL-gv-e49" firstAttribute="top" secondItem="aAf-dx-bAI" secondAttribute="bottom" constant="96" id="m3p-Hv-dqv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aAf-dx-bAI" secondAttribute="trailing" constant="30" id="ufm-gz-4Gl"/>
+                            <constraint firstItem="3ml-Ok-OAM" firstAttribute="centerX" secondItem="aAf-dx-bAI" secondAttribute="centerX" id="vqu-Zz-ygW"/>
+                            <constraint firstItem="aAf-dx-bAI" firstAttribute="centerY" secondItem="m9u-rz-qMh" secondAttribute="centerY" id="xJP-pg-m3T"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="followerLabel" destination="QjJ-K3-Nx6" id="TSj-eZ-rOY"/>
+                        <outlet property="followingLabel" destination="3ml-Ok-OAM" id="oXc-xQ-Wch"/>
+                        <outlet property="locationLabel" destination="SdL-gv-e49" id="7Uf-sK-q2w"/>
+                        <outlet property="profileImageView" destination="jNU-kO-7eQ" id="UpK-5V-EuX"/>
+                        <outlet property="usernameLabel" destination="k4s-ks-Ts7" id="CK4-3a-Qc1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aF9-zi-AVr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1484" y="-651"/>
+            <point key="canvasLocation" x="1484" y="-651.72413793103453"/>
         </scene>
         <!--My Timeline-->
         <scene sceneID="tne-QT-ifu">
@@ -89,7 +158,7 @@
                     <navigationItem key="navigationItem" title="My Timeline" id="HmK-nt-Q98">
                         <barButtonItem key="rightBarButtonItem" title="My Profile" id="7bU-fs-B4z">
                             <connections>
-                                <segue destination="34t-5P-7gi" kind="show" id="W5B-ot-MAh"/>
+                                <segue destination="34t-5P-7gi" kind="show" identifier="ShowProfileSegue" id="W5B-ot-MAh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -19,6 +19,6 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         retweetedLabel.text = tweet.isRetweeted ? "Retweeted" : "Non-retweeted"
         tweetLabel.text = tweet.text
-        usernameLabel.text = tweet.user?.name ?? "Unknown"
+        usernameLabel.text = tweet.user?.name == "" ? "Unknown" : tweet.user?.name
     }
 }
