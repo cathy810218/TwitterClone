@@ -12,7 +12,8 @@ extension UIImage {
     
     class func fetchImageWith(_ urlString: String, callback: @escaping (UIImage?) -> Void) {
         OperationQueue().addOperation {
-            guard let url = URL(string: urlString) else {
+            let imageString = urlString.replacingOccurrences(of: "_normal", with: "")
+            guard let url = URL(string: imageString) else {
                 callback(nil)
                 return
             }

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TimelineViewController.swift
 //  TwitterClone
 //
 //  Created by Cathy Oun on 3/21/17.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TimelineViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var allTweets = [Tweet]()
-    var loggedInUser: User?
+    var currentUser: User?
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -42,7 +42,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             guard let destinationController = segue.destination as? ProfileViewController else {
                 return
             }
-            destinationController.user = loggedInUser
+            destinationController.user = currentUser
             break
         default:
             break
@@ -58,10 +58,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 }
                 
                 TwitterService.shared.getOAuthUser(callback: { (errorMsg, user) in
-                    self.loggedInUser = user
+                    self.currentUser = user
                 })
             }
         }
+//        TwitterService.shared.getTweetsForUserWith((self.currentUser?.screenName)!) { (errorMessage, tweets) in
+//            if let tweets = tweets {
+//                self.allTweets = tweets
+//                self.tableView.reloadData()
+//            }
+//        }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

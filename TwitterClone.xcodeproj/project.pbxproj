@@ -23,8 +23,9 @@
 		6BA1B1671E81ECEE00FC04C0 /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA1B1651E81ECEE00FC04C0 /* TweetTableViewCell.swift */; };
 		6BA1B1681E81ECEE00FC04C0 /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BA1B1661E81ECEE00FC04C0 /* TweetTableViewCell.xib */; };
 		6BA1B16A1E81EE4C00FC04C0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA1B1691E81EE4C00FC04C0 /* DetailViewController.swift */; };
-		6BA1B16E1E81F13600FC04C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA1B16D1E81F13600FC04C0 /* ViewController.swift */; };
+		6BA1B16E1E81F13600FC04C0 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA1B16D1E81F13600FC04C0 /* TimelineViewController.swift */; };
 		6BA1B1701E83B0D200FC04C0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA1B16F1E83B0D200FC04C0 /* ProfileViewController.swift */; };
+		6BF5DB7B1E85D57C008F43F7 /* UserTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF5DB7A1E85D57C008F43F7 /* UserTimelineViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +68,9 @@
 		6BA1B1651E81ECEE00FC04C0 /* TweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 		6BA1B1661E81ECEE00FC04C0 /* TweetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
 		6BA1B1691E81EE4C00FC04C0 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		6BA1B16D1E81F13600FC04C0 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6BA1B16D1E81F13600FC04C0 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		6BA1B16F1E83B0D200FC04C0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		6BF5DB7A1E85D57C008F43F7 /* UserTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTimelineViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,7 +166,8 @@
 			children = (
 				6BA1B1691E81EE4C00FC04C0 /* DetailViewController.swift */,
 				6BA1B16F1E83B0D200FC04C0 /* ProfileViewController.swift */,
-				6BA1B16D1E81F13600FC04C0 /* ViewController.swift */,
+				6BA1B16D1E81F13600FC04C0 /* TimelineViewController.swift */,
+				6BF5DB7A1E85D57C008F43F7 /* UserTimelineViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -328,7 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BA1B16E1E81F13600FC04C0 /* ViewController.swift in Sources */,
+				6BA1B16E1E81F13600FC04C0 /* TimelineViewController.swift in Sources */,
 				6BA1B15E1E81D08200FC04C0 /* TweetJSONParser.swift in Sources */,
 				6BA1B1701E83B0D200FC04C0 /* ProfileViewController.swift in Sources */,
 				6BA1B15A1E81CFFB00FC04C0 /* Tweet.swift in Sources */,
@@ -337,6 +340,7 @@
 				6B47467A1E84C6B4004BE17F /* UIImage+Resized.swift in Sources */,
 				6BA1B1621E81EC9E00FC04C0 /* User.swift in Sources */,
 				6BA1B1601E81D0BB00FC04C0 /* TwitterService.swift in Sources */,
+				6BF5DB7B1E85D57C008F43F7 /* UserTimelineViewController.swift in Sources */,
 				6BA1B1291E81C0AE00FC04C0 /* AppDelegate.swift in Sources */,
 				6BA1B1671E81ECEE00FC04C0 /* TweetTableViewCell.swift in Sources */,
 				6BA1B16A1E81EE4C00FC04C0 /* DetailViewController.swift in Sources */,

@@ -15,7 +15,6 @@ class User {
     let location: String
     var followerCount: String?
     var followingCount: String?
-    var profileImage: UIImage?
     
     init?(json: [String: Any]) {
         if let name = json["name"] as? String,
@@ -31,24 +30,10 @@ class User {
                 self.followerCount = String(followerCount)
                 self.followingCount = String(followingCount)
             }
-            self.profileImage = readImageFromURL(profileImageURL: profileImageURL)
         } else {
             return nil
         }
     }
     
-    func readImageFromURL(profileImageURL: String?) -> UIImage? {
-        var profileImage = UIImage()
-        OperationQueue.main.addOperation {
-            if let imageURLString = profileImageURL
-            {
-                let imageString = imageURLString.replacingOccurrences(of: "_normal", with: "")
-                let imageURL = URL(string: imageString)
-                if let img = try? UIImage(data: NSData(contentsOf: imageURL!) as Data) {
-                    profileImage = img!
-                }
-            }
-        }
-        return profileImage
-    }
+
 }
